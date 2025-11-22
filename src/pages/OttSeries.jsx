@@ -1,0 +1,34 @@
+import React from 'react'
+import { ottseries } from '../data/moviesData'
+function OttSeries() {
+  return (
+    <div>
+        <div className="p-6 bg-black min-h-screen text-white">
+      <h1 className="text-3xl font-bold mb-6">OOT-Series</h1>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {ottseries.map((movie) => (
+          <div
+            key={movie.id}
+            className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            <img
+              src={movie.img}
+              alt={movie.name}
+              className="w-full h-48 object-cover"
+            />
+
+            <div className="p-3">
+              <h2 className="text-lg font-semibold truncate">{movie.name}</h2>
+              <p className="text-sm text-gray-400">⏱ {movie.time}</p>
+              <p className="text-sm font-medium mt-1">⭐ IMDb: {movie.rating}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
+  )
+}
+
+export default OttSeries
