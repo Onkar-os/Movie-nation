@@ -1,6 +1,13 @@
 import React from 'react'
 import { allMovies,  } from '../data/moviesData'
+import { Navigate, useNavigate } from 'react-router-dom'
 function Hollywood() {
+  const navigate=useNavigate();
+   
+  const open=(id)=>{
+    navigate(`/others/${id}`)
+  }
+
   const hollywood=allMovies.filter(m=>m.category==="hollywood")
   return (
     <div>
@@ -11,6 +18,7 @@ function Hollywood() {
         {hollywood.map((movie) => (
           <div
             key={movie.id}
+            onClick={()=>open(movie.id)}
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
           >
             <img

@@ -73,7 +73,7 @@ function Others() {
         {/* Episodes (FOR SERIES) */}
         {movie.episodes && movie.episodes.length > 0 && (
           <div className="mt-10">
-            <h2 className="text-2xl font-bold mb-3">📺 Episodes</h2>
+            <h2 className="text-2xl font-bold mb-3">📺 Season 1</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {movie.episodes.map((ep, index) => (
                 <div

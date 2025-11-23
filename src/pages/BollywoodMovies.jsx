@@ -1,9 +1,13 @@
 import React from "react";
 import { allMovies,  } from "../data/moviesData";
 
-
+import { Navigate, useNavigate } from "react-router-dom";
 
 function BollywoodMovies() {
+  const navigate=useNavigate();
+  const open =(id)=>{
+    navigate(`/others/${id}`)
+  }
   const bollywood=allMovies.filter(m=>m.category==="bollywood")
   return (
     <div className="bg-black min-h-screen py-10 px-6">
@@ -16,6 +20,7 @@ function BollywoodMovies() {
         {bollywood.map((movie) => (
           <div
             key={movie.id}
+            onClick={()=>open(movie.id)}
             className="bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
           >
             {/* Movie Poster */}

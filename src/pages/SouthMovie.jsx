@@ -1,8 +1,13 @@
 import React from "react";
 import { allMovies,  } from "../data/moviesData";
-
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function SouthMovie() {
+  const navigate=useNavigate();
+
+  const open=(id)=>{
+    navigate(`/others/${id}`)
+  }
   const south=allMovies.filter(m=>m.category==="south")
   return (
     <div className="p-6 bg-black min-h-screen text-white">
@@ -12,6 +17,7 @@ export default function SouthMovie() {
         {south.map((movie) => (
           <div
             key={movie.id}
+            onClick={()=>open(movie.id)}
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
           >
             <img

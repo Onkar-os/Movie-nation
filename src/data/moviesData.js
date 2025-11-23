@@ -119,7 +119,7 @@ export const allMovies = [
     img: kgf,
     time: "2h 48m",
     rating: 8.5,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/KfsY-qwBS0",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -142,7 +142,7 @@ export const allMovies = [
     img: pushpa,
     time: "2h 59m",
     rating: 7.8,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/MhIulWFPcpg",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -165,7 +165,7 @@ export const allMovies = [
     img: leo,
     time: "2h 44m",
     rating: 7.9,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/Po3jStA673E",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -188,7 +188,7 @@ export const allMovies = [
     img: salaar,
     time: "2h 55m",
     rating: 8.0,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/HihakYi5M2I",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -213,7 +213,7 @@ export const allMovies = [
     time: "2h 48m",
     rating: 8.4,
     img: familyman,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/jsauQx_Fwrg",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -223,9 +223,35 @@ export const allMovies = [
     episodes: [
       {
         title: "Episode 1",
-        time: "2h 48min",
+        time: " 48min",
         download: "/downloads/episode1.mp4",
       },
+      {
+        title: "Episode 2",
+        time: " 44min",
+        download: "/downloads/episode2.mp4",
+      },
+      {
+        title: "Episode 3",
+        time: " 52min",
+        download: "/downloads/episode3.mp4",
+      },
+      {
+        title: "Episode 4",
+        time: " 55min",
+        download: "/downloads/episode4.mp4",
+      },
+      {
+        title: "Episode 5",
+        time: " 48min",
+        download: "/downloads/episode5.mp4",
+      },
+      {
+        title: "Episode 6" ,
+        time: " 47min",
+        download: "/downloads/episode6.mp4",
+      },
+
     ],
     description: "This movie is about ...",
   },
