@@ -1,13 +1,14 @@
 import React from 'react'
-import { ottseries } from '../data/moviesData'
+import { allMovies,  } from '../data/moviesData'
 function OttSeries() {
+  const ott=allMovies.filter(m=>m.category==="ott")
   return (
     <div>
         <div className="p-6 bg-black min-h-screen text-white">
       <h1 className="text-3xl font-bold mb-6">OOT-Series</h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {ottseries.map((movie) => (
+        {ott.map((movie) => (
           <div
             key={movie.id}
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"

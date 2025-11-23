@@ -8,6 +8,7 @@ import BollywoodMovies from './pages/BollywoodMovies.jsx'
 import Hollywood from './pages/Hollywood.jsx'
 import SouthMovie from './pages/SouthMovie.jsx'
 import OttSeries from './pages/OttSeries.jsx'
+import Others from './pages/Others.jsx'
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/hollywood" element={<Hollywood></Hollywood>}></Route>
         <Route path="/southmovie" element={<SouthMovie></SouthMovie>}></Route>
         <Route path="/ottseries" element={<OttSeries></OttSeries>}></Route>
+        <Route path="/others/:id" element={<Others></Others>}></Route>
       </Routes>
       
 

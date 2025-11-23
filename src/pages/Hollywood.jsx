@@ -1,6 +1,7 @@
 import React from 'react'
-import { hollywood } from '../data/moviesData'
+import { allMovies,  } from '../data/moviesData'
 function Hollywood() {
+  const hollywood=allMovies.filter(m=>m.category==="hollywood")
   return (
     <div>
         <div className="p-6 bg-black min-h-screen text-white">

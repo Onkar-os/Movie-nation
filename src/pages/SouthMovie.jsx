@@ -1,14 +1,15 @@
 import React from "react";
-import { southMovies } from "../data/moviesData";
+import { allMovies,  } from "../data/moviesData";
 
 
 export default function SouthMovie() {
+  const south=allMovies.filter(m=>m.category==="south")
   return (
     <div className="p-6 bg-black min-h-screen text-white">
       <h1 className="text-3xl font-bold mb-6">South Movies</h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {southMovies.map((movie) => (
+        {south.map((movie) => (
           <div
             key={movie.id}
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
