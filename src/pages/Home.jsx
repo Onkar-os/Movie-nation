@@ -3,15 +3,21 @@ import Navbar from "../components/Navbar";
 
 import { bollywoodMovies, ottseries, southMovies,hollywood } from "../data/moviesData";
 // import Hollywood from "./Hollywood";
+import { Navigate, useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Home() {
+  const navigate = useNavigate();
+  function open(){
+         navigate('/bollywoodmovies') 
+  }
   return (
     <div className="bg-black min-h-screen">
       <Navbar />
 
       <h2 className="text-2xl font-bold mb-4 text-white">Featured Movies</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+      <div onClick={open} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {bollywoodMovies.map((movie, index) => (
           <div
             key={index}
@@ -27,7 +33,7 @@ function Home() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+      <div onClick={open} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {southMovies.map((movie, index) => (
           <div
             key={index}
@@ -43,7 +49,7 @@ function Home() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+      <div onClick={open} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {hollywood.map((movie, index) => (
           <div
             key={index}
@@ -59,7 +65,7 @@ function Home() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+      <div onClick={open} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {ottseries.map((movie, index) => (
           <div
             key={index}
@@ -75,6 +81,7 @@ function Home() {
           </div>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 }
