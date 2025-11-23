@@ -25,7 +25,7 @@ export const allMovies = [
     rating: 7.5,
     description:
       "The Movie is About Father and Son story THE ANIMAL, YOU HAVE NEVER SEEN BEFORE! PRESENTING THE OFFICIAL TRAILER OF THE FILM ANIMAL. STARRING RANBIR KAPOOR, RASHMIKA MANDANNA, ANIL KAPOOR, BOBBY DEOL, TRIPTI DIMRI & SHAKTI KAPOOR.",
-    trailer: "https://youtu.be/8FkLRUJj-o0?t=2",
+    trailer: "https://www.youtube.com/embed/8FkLRUJj-o0",
     cast: ["Ranbir Kapoor", "Boby Deol", " Rashmika Mandhanna","TRIPTI DIMRI"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -48,7 +48,7 @@ export const allMovies = [
     img: jawan,
     time: "2h 49m",
     rating: 8.2,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/COv52Qyctws",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -71,7 +71,7 @@ export const allMovies = [
     img: pathaan,
     time: "2h 26m",
     rating: 6.8,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/vqu4z34wENw",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
@@ -94,7 +94,7 @@ export const allMovies = [
     img: idiots,
     time: "2h 50m",
     rating: 8.0,
-    trailer: "https://www.youtube.com/embed/your-video-id",
+    trailer: "https://www.youtube.com/embed/lbCRtrrMvSw",
     cast: ["Actor 1", "Actor 2", "Actor 3"],
     downloadLinks: [
       { quality: "480p", url: "/downloads/movie-480p.mp4" },
