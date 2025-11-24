@@ -1,44 +1,63 @@
 import React from "react";
-import { allMovies,  } from "../data/moviesData";
-
-import { Navigate, useNavigate } from "react-router-dom";
+import { allMovies } from "../data/moviesData";
+import { useNavigate } from "react-router-dom";
 
 function BollywoodMovies() {
-  const navigate=useNavigate();
-  const open =(id)=>{
-    navigate(`/others/${id}`)
-  }
-  const bollywood=allMovies.filter(m=>m.category==="bollywood")
+  const navigate = useNavigate();
+
+  const open = (id) => {
+    navigate(`/others/${id}`);
+  };
+
+  const bollywood = allMovies.filter((m) => m.category === "bollywood");
+
   return (
     <div className="bg-black min-h-screen py-10 px-6">
-      <h1 className="text-white text-3xl font-bold mb-6">
+      
+      {/* Title */}
+      <h1 className="text-white text-4xl font-extrabold mb-8 tracking-wide">
         Bollywood Movies
       </h1>
 
-      {/* Movie Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* Movies Grid */}
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
         {bollywood.map((movie) => (
           <div
             key={movie.id}
-            onClick={()=>open(movie.id)}
-            className="bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+            onClick={() => open(movie.id)}
+            className="
+              bg-gradient-to-b from-gray-900/90 to-gray-800/90 
+              rounded-xl overflow-hidden shadow-xl 
+              hover:scale-105 hover:shadow-2xl 
+              transition-all duration-300 cursor-pointer relative
+            "
           >
-            {/* Movie Poster */}
-            <img
-              src={movie.img}
-              alt={movie.title}
-              className="w-full h-64 object-cover"
-            />
+            {/* Image Wrapper */}
+            <div className="relative">
+              <img
+                src={movie.img}
+                alt={movie.name}
+                className="w-full h-64 object-cover"
+              />
 
-            {/* Movie Details */}
-            <div className="p-4 text-white">
-              <h2 className="text-lg font-semibold">{movie.name}</h2>
+              {/* Hover Overlay */}
+              <div className="
+                absolute inset-0 
+                bg-black/20 
+                hover:bg-black/40 
+                transition-all duration-300
+              "></div>
+            </div>
 
-              <p className="text-sm text-gray-400">
-                {movie.time} 
-              </p>
+            {/* Details */}
+            <div className="p-4 text-white space-y-1">
+              <h2 className="text-lg font-semibold line-clamp-1">
+                {movie.name}
+              </h2>
 
-              <p className="mt-2 text-yellow-400 font-semibold">
+              <p className="text-sm opacity-70">{movie.time}</p>
+
+              <p className="mt-1 text-yellow-400 font-bold">
                 ⭐ IMDb: {movie.rating}
               </p>
             </div>

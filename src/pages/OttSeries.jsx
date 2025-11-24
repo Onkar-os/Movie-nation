@@ -1,42 +1,54 @@
-import React from 'react'
-import { allMovies,  } from '../data/moviesData'
-import { Navigate, useNavigate } from 'react-router-dom'
+import React from "react";
+import { allMovies } from "../data/moviesData";
+import { useNavigate } from "react-router-dom";
+
 function OttSeries() {
-  const ott=allMovies.filter(m=>m.category==="ott")
-  const navigate=useNavigate()
+  const ott = allMovies.filter((m) => m.category === "ott");
+  const navigate = useNavigate();
 
-  const open=(id)=>{
-    navigate(`/others/${id}`)
-  }
+  const open = (id) => {
+    navigate(`/others/${id}`);
+  };
+
   return (
-    <div>
-        <div className="p-6 bg-black min-h-screen text-white">
-      <h1 className="text-3xl font-bold mb-6">OOT-Series</h1>
+    <div className="bg-black min-h-screen p-6 text-white">
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <h1 className="text-4xl font-extrabold mb-8 tracking-wide">
+        OTT Series
+      </h1>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7">
         {ott.map((movie) => (
           <div
             key={movie.id}
-            onClick={()=>open(movie.id)}
-            className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            onClick={() => open(movie.id)}
+            className="
+              bg-gradient-to-b from-gray-900/90 to-gray-800/90 
+              rounded-xl shadow-xl overflow-hidden
+              hover:scale-105 hover:shadow-2xl 
+              transition-all duration-300 cursor-pointer
+            "
           >
-            <img
-              src={movie.img}
-              alt={movie.name}
-              className="w-full h-48 object-cover"
-            />
+            <div className="relative">
+              <img
+                src={movie.img}
+                alt={movie.name}
+                className="w-full h-56 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20 hover:bg-black/40 transition duration-300"></div>
+            </div>
 
-            <div className="p-3">
-              <h2 className="text-lg font-semibold truncate">{movie.name}</h2>
+            <div className="p-4 space-y-1">
+              <h2 className="text-lg font-semibold line-clamp-1">{movie.name}</h2>
               <p className="text-sm text-gray-400">⏱ {movie.time}</p>
-              <p className="text-sm font-medium mt-1">⭐ IMDb: {movie.rating}</p>
+              <p className="text-yellow-400 font-bold">⭐ IMDb: {movie.rating}</p>
             </div>
           </div>
         ))}
       </div>
+
     </div>
-    </div>
-  )
+  );
 }
 
-export default OttSeries
+export default OttSeries;
