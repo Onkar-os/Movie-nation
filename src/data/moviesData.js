@@ -14,6 +14,42 @@ import anaconda from "../assets/anaconda.jpeg";
 import ironman from "../assets/ironman.jpeg";
 import captainamerica from "../assets/captainamerica.jpeg";
 import spiderman from "../assets/spiderman.jpeg";
+import fifa from '../assets/fifa.jpeg';
+import formulaf1 from '../assets/formulaf1.jpeg';
+
+
+import ipl from '../assets/ipl.jpeg';
+import isl from '../assets/isl.png'
+import laliga from '../assets/laliga.png'
+import nba from '../assets/nba.jpeg'
+import olympics from '../assets/olympics.jpeg'
+import premierleague from '../assets/premierleague.png'
+import prokabaddi from '../assets/prokabaddi.jpeg'
+import uefa from '../assets/uefa.png'
+import ufc from '../assets/ufc.png'
+import wimbledon from '../assets/wimbledon.webp'
+import worldcup from '../assets/worldcup.png'
+import tourdefrance from '../assets/tourdefrance.jpeg';
+import  wwe from '../assets/wwe.png'
+import boxingworld from '../assets/boxingworld.png';
+
+//cartoon
+import aatar from '../assets/aatar.jpeg'
+import ben10 from '../assets/ben10.jpeg'
+import chotabheem from '../assets/chotabheem.jpeg'
+import doremon from '../assets/doremon.jpeg'
+import kungfupanda from '../assets/kungfupanda.jpeg'
+import motupatlu from '../assets/motupatlu.jpeg'
+import oggy from '../assets/oggy.jpeg'
+import pokemon from '../assets/pokemon.jpeg'
+import scoobydoo from '../assets/scoobydoo.jpeg'
+import shinchan from '../assets/shinchan.png'
+import tomandjerry from '../assets/tomandjerry.jpeg'
+import ninja from '../assets/ninja.jpeg'
+import spiderman1 from '../assets/spiderman1.jpeg'
+import simpsons from '../assets/simpsons.webp'
+import looney from '../assets/looney.webp'
+import frozen from '../assets/frozen.jpeg'
 export const allMovies = [
   // Bollywood
   {
@@ -418,4 +454,83 @@ export const allMovies = [
     ],
     description: "This movie is about ...",
   },
+];
+// ---------------- SPORTS ----------------
+export const sports = [
+  { id: 1, name: "ICC Cricket World Cup",category:"Cricket", img: worldcup, description: "International championship of One Day cricket." },
+  { id: 2, name: "FIFA World Cup",category:"Football", img: fifa, description: "The biggest international football tournament." },
+  { id: 3, name: "Wimbledon",category:"Wimbledon", img:wimbledon, description: "Prestigious tennis Grand Slam held in London." },
+  { id: 4, name: "Olympic Games",category:"Cricket", img:olympics, description: "Largest international multi-sport event." },
+  { id: 5, name: "NBA Finals",category:"Basketball", img: nba, description: "Championship series of the National Basketball Association." },
+  { id: 6, name: "Formula 1 Championship",category:"Racing", img: formulaf1, description: "World's top-level motor racing competition." },
+  { id: 7, name: "UEFA Champions League",category:"Football", img: uefa, description: "Top European football club tournament." },
+  { id: 8, name: "IPL – Indian Premier League",category:"Cricket", img: ipl, description: "World’s biggest domestic T20 cricket league." },
+  { id: 9, name: "La Liga",category:"Football", img: laliga, description: "Top Spain football league featuring Real Madrid & Barcelona." },
+  { id: 10, name: "Premier League",category:"Football", img: premierleague, description: "England’s top-tier football league." },
+  { id: 11, name: "UFC Championship",category:"Boxing", img: ufc, description: "World’s leading Mixed Martial Arts competition." },
+  { id: 12, name: "WWE WrestleMania",category:"Boxing", img: wwe, description: "Professional wrestling’s biggest annual event." },
+  { id: 13, name: "Pro Kabaddi League",category:"Kabaddi", img: prokabaddi, description: "India's professional kabaddi league." },
+  { id: 14, name: "ISL – Indian Super League",category:"Football", img: isl, description: "India’s top-level football league." },
+  { id: 15, name: "Tour de France",category:"Cricket", img: tourdefrance, description: "World's most famous cycling race." },
+  { id: 16, name: "Boxing World Championship",category:"Boxing", img: boxingworld, description: "Prestigious global boxing tournament." },
+];
+
+// ---------------- CARTOONS ----------------
+export const cartoons = [
+  { id: 1, name: "Doraemon", img: doremon, description: "A robot cat helps a young boy Nobita." },
+  { id: 2, name: "Shinchan", img: shinchan, description: "Comedy show about mischievous kid Shinnosuke Nohara." },
+  { id: 3, name: "Tom and Jerry", img: tomandjerry, description: "Classic cat-and-mouse comedy." },
+  { id: 4, name: "Ben 10", img: ben10, description: "A boy uses an alien device Omnitrix to transform." },
+  { id: 5, name: "Pokemon", img: pokemon, description: "Ash and Pikachu explore the world to become Pokémon masters." },
+  { id: 6, name: "Motu Patlu", img: motupatlu, description: "Two friends solve problems in Furfuri Nagar." },
+  { id: 7, name: "Chhota Bheem", img: chotabheem, description: "A brave kid saves Dholakpur from villains." },
+  { id: 8, name: "Oggy and the Cockroaches", img: oggy, description: "Comedy about Oggy and three cockroaches." },
+  { id: 9, name: "Kung Fu Panda", img: kungfupanda, description: "Po learns kung fu to become the Dragon Warrior." },
+  { id: 10, name: "Avatar: The Last Airbender", img: aatar, description: "Aang must master all elements to save the world." },
+  { id: 11, name: "Scooby-Doo", img: scoobydoo, description: "A group solves mysteries with Scooby." },
+  { id: 12, name: "Teenage Mutant Ninja Turtles", img: ninja, description: "Four turtle brothers fight crime." },
+  { id: 13, name: "Spider-Man Animated Series", img: spiderman1, description: "Peter Parker fights villains in NYC." },
+  { id: 14, name: "The Simpsons", img: simpsons, description: "Comedy series about the Simpson family." },
+  { id: 15, name: "Looney Tunes", img: looney, description: "Bugs Bunny, Daffy Duck and friends." },
+  { id: 16, name: "Frozen – The Series", img: frozen, description: "Anna and Elsa’s adventures." },
+];
+
+// ---------------- NEWS ----------------
+export const news = [
+  { id: 1, name: "NDTV India", img: "news1.jpg", description: "24/7 India news coverage." },
+  { id: 2, name: "Aaj Tak", img: "news2.jpg", description: "India’s most popular Hindi news channel." },
+  { id: 3, name: "Republic TV", img: "news3.jpg", description: "Indian news and political debates." },
+  { id: 4, name: "CNN", img: "news4.jpg", description: "World’s leading international news network." },
+  { id: 5, name: "BBC News", img: "news5.jpg", description: "Global breaking news and analysis." },
+  { id: 6, name: "Al Jazeera", img: "news6.jpg", description: "Middle East and world news." },
+  { id: 7, name: "India TV", img: "news7.jpg", description: "Popular Indian Hindi news channel." },
+  { id: 8, name: "ABP News", img: "news8.jpg", description: "Hindi news and live updates." },
+  { id: 9, name: "Times Now", img: "news9.jpg", description: "English-language news from India." },
+  { id: 10, name: "Zee News", img: "news10.jpg", description: "Domestic & international news." },
+  { id: 11, name: "CNBC", img: "news11.jpg", description: "Business and stock market news." },
+  { id: 12, name: "WION", img: "news12.jpg", description: "World-is-One global news." },
+  { id: 13, name: "News18 India", img: "news13.jpg", description: "Live Hindi news coverage." },
+  { id: 14, name: "Fox News", img: "news14.jpg", description: "US political & world news." },
+  { id: 15, name: "France 24", img: "news15.jpg", description: "Live world news from France." },
+  { id: 16, name: "Sky News", img: "news16.jpg", description: "UK & international news." },
+];
+
+// ---------------- TV SERIALS ----------------
+export const tv = [
+  { id: 1, name: "Anupamaa", img: "tv1.jpg", description: "Story of a housewife rediscovering life." },
+  { id: 2, name: "Yeh Rishta Kya Kehlata Hai", img: "tv2.jpg", description: "India’s longest-running family show." },
+  { id: 3, name: "Taarak Mehta Ka Ooltah Chashmah", img: "tv3.jpg", description: "Comedy show based on Gokuldham society." },
+  { id: 4, name: "Kundali Bhagya", img: "tv4.jpg", description: "Drama about relationships and destiny." },
+  { id: 5, name: "Bigg Boss", img: "tv5.jpg", description: "India’s most popular reality show." },
+  { id: 6, name: "Naagin", img: "tv6.jpg", description: "Fantasy shape-shifting serpent story." },
+  { id: 7, name: "Mahabharat", img: "tv7.jpg", description: "Epic mythological show." },
+  { id: 8, name: "CID", img: "tv8.jpg", description: "Famous Indian crime investigation series." },
+  { id: 9, name: "Crime Patrol", img: "tv9.jpg", description: "Real-life crime stories from India." },
+  { id: 10, name: "Bhabhi Ji Ghar Par Hain", img: "tv10.jpg", description: "Popular comedy TV show." },
+  { id: 11, name: "Shaktimaan", img: "tv11.jpg", description: "India’s first superhero show." },
+  { id: 12, name: "Jethalal Comedy Compilation", img: "tv12.jpg", description: "Funniest moments from TMKOC." },
+  { id: 13, name: "Ramayana", img: "tv13.jpg", description: "Legendary mythological series." },
+  { id: 14, name: "Khatron Ke Khiladi", img: "tv14.jpg", description: "Adventure stunt-based reality show." },
+  { id: 15, name: "Dance India Dance", img: "tv15.jpg", description: "India’s top dance reality show." },
+  { id: 16, name: "Sarabhai vs Sarabhai", img: "tv16.jpg", description: "Cult comedy show about a quirky family." },
 ];
