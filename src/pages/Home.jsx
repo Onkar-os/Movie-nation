@@ -67,7 +67,7 @@ function Home() {
             <div className="p-3 text-white">
               <h3 className="font-semibold">{sports.name}</h3>
               <p className="text-sm opacity-80">⏳ {sports.description}</p>
-              <p className="text-sm opacity-80">⭐ IMDB: {sports.category}</p>
+              <p className="text-sm opacity-80">Category: {sports.category}</p>
             </div>
           </div>
         ))}

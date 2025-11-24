@@ -50,6 +50,25 @@ import spiderman1 from '../assets/spiderman1.jpeg'
 import simpsons from '../assets/simpsons.webp'
 import looney from '../assets/looney.webp'
 import frozen from '../assets/frozen.jpeg'
+
+//tv-serials
+import anupamaa from '../assets/anupamaa.jpeg'
+import yehrishta from '../assets/yehrishta.jpeg'
+import bhabi from '../assets/bhabi.jpeg'
+import kundali from '../assets/kundali.jpeg'
+import bigbos from '../assets/bigbos.jpeg'
+import cid from '../assets/cid.jpeg'
+import crimepetrol from '../assets/crimepetrol.jpeg'
+import danceindia from '../assets/danceindia.jpeg'
+import jethalal from '../assets/jethalal.jpeg'
+import khiladi from '../assets/khiladi.jpeg'
+import mahabharat from '../assets/mahabharat.jpeg'
+import naagin from '../assets/naagin.jpeg'
+import sarabhai from '../assets/sarabhai.jpeg'
+import shaktimaan from '../assets/shaktimaan.jpeg'
+import taarak from '../assets/taarak.jpeg'
+import ramayana from '../assets/ramayana.webp'
+
 export const allMovies = [
   // Bollywood
   {
@@ -517,20 +536,20 @@ export const news = [
 
 // ---------------- TV SERIALS ----------------
 export const tv = [
-  { id: 1, name: "Anupamaa", img: "tv1.jpg", description: "Story of a housewife rediscovering life." },
-  { id: 2, name: "Yeh Rishta Kya Kehlata Hai", img: "tv2.jpg", description: "India’s longest-running family show." },
-  { id: 3, name: "Taarak Mehta Ka Ooltah Chashmah", img: "tv3.jpg", description: "Comedy show based on Gokuldham society." },
-  { id: 4, name: "Kundali Bhagya", img: "tv4.jpg", description: "Drama about relationships and destiny." },
-  { id: 5, name: "Bigg Boss", img: "tv5.jpg", description: "India’s most popular reality show." },
-  { id: 6, name: "Naagin", img: "tv6.jpg", description: "Fantasy shape-shifting serpent story." },
-  { id: 7, name: "Mahabharat", img: "tv7.jpg", description: "Epic mythological show." },
-  { id: 8, name: "CID", img: "tv8.jpg", description: "Famous Indian crime investigation series." },
-  { id: 9, name: "Crime Patrol", img: "tv9.jpg", description: "Real-life crime stories from India." },
-  { id: 10, name: "Bhabhi Ji Ghar Par Hain", img: "tv10.jpg", description: "Popular comedy TV show." },
-  { id: 11, name: "Shaktimaan", img: "tv11.jpg", description: "India’s first superhero show." },
-  { id: 12, name: "Jethalal Comedy Compilation", img: "tv12.jpg", description: "Funniest moments from TMKOC." },
-  { id: 13, name: "Ramayana", img: "tv13.jpg", description: "Legendary mythological series." },
-  { id: 14, name: "Khatron Ke Khiladi", img: "tv14.jpg", description: "Adventure stunt-based reality show." },
-  { id: 15, name: "Dance India Dance", img: "tv15.jpg", description: "India’s top dance reality show." },
-  { id: 16, name: "Sarabhai vs Sarabhai", img: "tv16.jpg", description: "Cult comedy show about a quirky family." },
+  { id: 1, name: "Anupamaa", img: anupamaa, description: "Story of a housewife rediscovering life." },
+  { id: 2, name: "Yeh Rishta Kya Kehlata Hai", img: yehrishta, description: "India’s longest-running family show." },
+  { id: 3, name: "Taarak Mehta Ka Ooltah Chashmah", img: taarak, description: "Comedy show based on Gokuldham society." },
+  { id: 4, name: "Kundali Bhagya", img: kundali, description: "Drama about relationships and destiny." },
+  { id: 5, name: "Bigg Boss", img: bigbos, description: "India’s most popular reality show." },
+  { id: 6, name: "Naagin", img: naagin, description: "Fantasy shape-shifting serpent story." },
+  { id: 7, name: "Mahabharat", img: mahabharat, description: "Epic mythological show." },
+  { id: 8, name: "CID", img: cid, description: "Famous Indian crime investigation series." },
+  { id: 9, name: "Crime Patrol", img: crimepetrol, description: "Real-life crime stories from India." },
+  { id: 10, name: "Bhabhi Ji Ghar Par Hain", img: bhabi, description: "Popular comedy TV show." },
+  { id: 11, name: "Shaktimaan", img: shaktimaan, description: "India’s first superhero show." },
+  { id: 12, name: "Jethalal Comedy Compilation", img:jethalal , description: "Funniest moments from TMKOC." },
+  { id: 13, name: "Ramayana", img: ramayana, description: "Legendary mythological series." },
+  { id: 14, name: "Khatron Ke Khiladi", img: khiladi, description: "Adventure stunt-based reality show." },
+  { id: 15, name: "Dance India Dance", img: danceindia, description: "India’s top dance reality show." },
+  { id: 16, name: "Sarabhai vs Sarabhai", img: sarabhai, description: "Cult comedy show about a quirky family." },
 ];
