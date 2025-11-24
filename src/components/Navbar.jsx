@@ -36,28 +36,28 @@ function Navbar() {
               {dropdownOpen && (
                 <div className="absolute left-0 mt-2 bg-gray-900 text-white w-40 rounded shadow-md py-2">
                   <Link
-                    to="/bollywood"
+                    to="/sports"
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={() => setDropdownOpen(false)}
                   >
                     Sports
                   </Link>
                   <Link
-                    to="/hollywood"
+                    to="/news"
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={() => setDropdownOpen(false)}
                   >
                     News
                   </Link>
                   <Link
-                    to="/south"
+                    to="/tvserials"
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={() => setDropdownOpen(false)}
                   >
                    TV Serials
                   </Link>
                   <Link
-                    to="/web-series"
+                    to="/cartoons"
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={() => setDropdownOpen(false)}
                   >

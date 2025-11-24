@@ -9,6 +9,10 @@ import Hollywood from './pages/Hollywood.jsx'
 import SouthMovie from './pages/SouthMovie.jsx'
 import OttSeries from './pages/OttSeries.jsx'
 import Others from './pages/Others.jsx'
+import Sports from './pages/Sports.jsx'
+import News from './pages/News.jsx'
+import Tvserials from './pages/Tvserials.jsx'
+import Cartoons from './pages/Cartoons.jsx'
 function App() {
 
 
@@ -23,6 +27,10 @@ function App() {
         <Route path="/southmovie" element={<SouthMovie></SouthMovie>}></Route>
         <Route path="/ottseries" element={<OttSeries></OttSeries>}></Route>
         <Route path="/others/:id" element={<Others></Others>}></Route>
+        <Route path='/sports' element={<Sports></Sports>}></Route>
+        <Route path='/news' element={<News></News>}></Route>
+        <Route path='/tvserials' element={<Tvserials></Tvserials>}></Route>
+        <Route path='/cartoons' element={<Cartoons></Cartoons>}></Route>
       </Routes>
       
 

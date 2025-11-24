@@ -20,7 +20,8 @@ function Home() {
       </h2>
 
       {/* 🔥 Horizontal Scroll Container */}
-      <div className="flex overflow-x-auto space-x-5 pb-4 px-4 scrollbar-hide">
+      <div className="flex overflow-x-auto space-x-5 pb-4 px-4 hide-scrollbar">
+
         {allMovies.map((movie) => (
           <div
             key={movie.id}
@@ -47,7 +48,8 @@ function Home() {
         Sports
       </h2>
       
-      <div className="flex overflow-x-auto space-x-5 pb-4 px-4 scrollbar-hide">
+      <div className="flex overflow-x-auto space-x-5 pb-4 px-4 hide-scrollbar">
+
          {sports.map((sports) => (
           <div
             key={sports.id}
@@ -74,7 +76,9 @@ function Home() {
         Cartoons
       </h2>
       
-      <div className="flex overflow-x-auto space-x-5 pb-4 px-4 scrollbar-hide">
+      <div className="flex overflow-x-auto space-x-5 pb-4 px-4 hide-scrollbar">
+
+        
          {cartoons.map((cartoon) => (
           <div
             key={cartoon.id}
