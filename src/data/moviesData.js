@@ -21,7 +21,7 @@ import formulaf1 from '../assets/formulaf1.jpeg';
 import ipl from '../assets/ipl.jpeg';
 import isl from '../assets/isl.png'
 import laliga from '../assets/laliga.png'
-import nba from '../assets/nba.jpeg'
+import nba from '../assets/Nba.jpeg'
 import olympics from '../assets/olympics.jpeg'
 import premierleague from '../assets/premierleague.png'
 import prokabaddi from '../assets/prokabaddi.jpeg'
