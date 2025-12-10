@@ -69,6 +69,25 @@ import shaktimaan from '../assets/shaktimaan.jpeg'
 import taarak from '../assets/taarak.jpeg'
 import ramayana from '../assets/ramayana.webp'
 
+//news
+import aajtak from '../assets/aajtak.png';
+import abpnews from '../assets/abpnews.jpeg';
+import aljazeera from '../assets/alj.png';
+import bbcnews from '../assets/bbc.png';
+import cnbc from '../assets/cnbc.png';
+import cnn from '../assets/cnn.png';
+import foxnews from '../assets/foxnews.png';
+import france24 from '../assets/france24.png';
+import indiatv from '../assets/indiatv.jpeg';
+import ndtv from '../assets/ndtv.png';
+import new18india from '../assets/news18india.png';
+import republic from '../assets/republic.png';
+import skynews from '../assets/skynews.jpeg';
+import timesnow from '../assets/timesnow.jpeg';
+import wion from '../assets/wion.jpeg';
+import zeenews from '../assets/zeenews.png';
+
+
 export const allMovies = [
   // Bollywood
   {
@@ -87,11 +106,11 @@ export const allMovies = [
       { quality: "720p", url: "/downloads/movie-720p.mp4" },
       { quality: "1080p", url: "/downloads/movie-1080p.mp4" },
     ],
-    episodes: [
+    Movie: [
       {
-        title: "Episode 1",
+        title: "Animal",
         time: "3h 21min",
-        download: "/downloads/episode1.mp4",
+        Watch: "/downloads/episode1.mp4",
       },
     ],
     
@@ -110,7 +129,7 @@ export const allMovies = [
       { quality: "720p", url: "/downloads/movie-720p.mp4" },
       { quality: "1080p", url: "/downloads/movie-1080p.mp4" },
     ],
-    episodes: [
+    Movie: [
       {
         title: "Episode 1",
         time: "2h 49min",
@@ -516,22 +535,22 @@ export const cartoons = [
 
 // ---------------- NEWS ----------------
 export const news = [
-  { id: 1, name: "NDTV India", img: "news1.jpg", description: "24/7 India news coverage." },
-  { id: 2, name: "Aaj Tak", img: "news2.jpg", description: "India’s most popular Hindi news channel." },
-  { id: 3, name: "Republic TV", img: "news3.jpg", description: "Indian news and political debates." },
-  { id: 4, name: "CNN", img: "news4.jpg", description: "World’s leading international news network." },
-  { id: 5, name: "BBC News", img: "news5.jpg", description: "Global breaking news and analysis." },
-  { id: 6, name: "Al Jazeera", img: "news6.jpg", description: "Middle East and world news." },
-  { id: 7, name: "India TV", img: "news7.jpg", description: "Popular Indian Hindi news channel." },
-  { id: 8, name: "ABP News", img: "news8.jpg", description: "Hindi news and live updates." },
-  { id: 9, name: "Times Now", img: "news9.jpg", description: "English-language news from India." },
-  { id: 10, name: "Zee News", img: "news10.jpg", description: "Domestic & international news." },
-  { id: 11, name: "CNBC", img: "news11.jpg", description: "Business and stock market news." },
-  { id: 12, name: "WION", img: "news12.jpg", description: "World-is-One global news." },
-  { id: 13, name: "News18 India", img: "news13.jpg", description: "Live Hindi news coverage." },
-  { id: 14, name: "Fox News", img: "news14.jpg", description: "US political & world news." },
-  { id: 15, name: "France 24", img: "news15.jpg", description: "Live world news from France." },
-  { id: 16, name: "Sky News", img: "news16.jpg", description: "UK & international news." },
+  { id: 1, name: "NDTV India", img: ndtv, description: "24/7 India news coverage." },
+  { id: 2, name: "Aaj Tak", img: aajtak, description: "India’s most popular Hindi news channel." },
+  { id: 3, name: "Republic TV", img: republic, description: "Indian news and political debates." },
+  { id: 4, name: "CNN", img: cnn, description: "World’s leading international news network." },
+  { id: 5, name: "BBC News", img: bbcnews, description: "Global breaking news and analysis." },
+  { id: 6, name: "Al Jazeera", img: aljazeera, description: "Middle East and world news." },
+  { id: 7, name: "India TV", img: indiatv, description: "Popular Indian Hindi news channel." },
+  { id: 8, name: "ABP News", img: abpnews, description: "Hindi news and live updates." },
+  { id: 9, name: "Times Now", img: timesnow, description: "English-language news from India." },
+  { id: 10, name: "Zee News", img: zeenews, description: "Domestic & international news." },
+  { id: 11, name: "CNBC", img: cnbc, description: "Business and stock market news." },
+  { id: 12, name: "WION", img: wion, description: "World-is-One global news." },
+  { id: 13, name: "News18 India", img: new18india, description: "Live Hindi news coverage." },
+  { id: 14, name: "Fox News", img: foxnews, description: "US political & world news." },
+  { id: 15, name: "France 24", img: france24, description: "Live world news from France." },
+  { id: 16, name: "Sky News", img: skynews, description: "UK & international news." },
 ];
 
 // ---------------- TV SERIALS ----------------

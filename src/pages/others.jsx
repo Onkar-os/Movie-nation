@@ -3,15 +3,16 @@ import { useParams } from "react-router-dom";
 import { allMovies } from "../data/moviesData";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import { sports } from "../data/moviesData";
 function Others() {
   const { id } = useParams();
   const movie = allMovies.find((m) => m.id === Number(id));
+  const sport= sports.find((s)=>s.id===Number(id));
 
-  if (!movie) {
+  if (!movie && !sport) {
     return (
       <div className="text-white text-center p-10 text-2xl">
-        Movie Not Found
+         Not Found
       </div>
     );
   }
@@ -92,12 +93,12 @@ function Others() {
         )}
 
         {/* EPISODES */}
-        {movie.episodes && movie.episodes.length > 0 && (
+        {movie.Movie && movie.Movie.length > 0 && (
           <div className="mt-12">
-            <h2 className="text-3xl font-bold mb-4">📺 Season 1 Episodes</h2>
+            <h2 className="text-3xl font-bold mb-4">📺 Movie </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {movie.episodes.map((ep, index) => (
+              {movie.Movie.map((ep, index) => (
                 <div
                   key={index}
                   className="bg-gray-900 p-5 rounded-xl border border-gray-700 
@@ -107,12 +108,12 @@ function Others() {
                   <p className="opacity-80">{ep.time}</p>
 
                   <a
-                    href={ep.download}
+                    href={ep.Watch}
                     className="inline-block mt-3 bg-blue-600 px-4 py-2 rounded-lg 
                                hover:bg-blue-700 transition-all shadow-md"
                     download
                   >
-                    Download
+                    Watch
                   </a>
                 </div>
               ))}
@@ -141,7 +142,10 @@ function Others() {
             </div>
           </div>
         )}
+        
+        
       </div>
+      
 
       <Footer />
     </div>
