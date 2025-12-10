@@ -8,7 +8,7 @@ import BollywoodMovies from './pages/BollywoodMovies.jsx'
 import Hollywood from './pages/Hollywood.jsx'
 import SouthMovie from './pages/SouthMovie.jsx'
 import OttSeries from './pages/OttSeries.jsx'
-import Others from './pages/Others.jsx'
+import Others from "./pages/others.jsx";
 import Sports from './pages/Sports.jsx'
 import News from './pages/News.jsx'
 import Tvserials from './pages/Tvserials.jsx'
