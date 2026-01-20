@@ -3,13 +3,11 @@ import { useParams } from "react-router-dom";
 import { allMovies } from "../data/moviesData";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { sports } from "../data/moviesData";
 function Others() {
   const { id } = useParams();
   const movie = allMovies.find((m) => m.id === Number(id));
-  const sport= sports.find((s)=>s.id===Number(id));
 
-  if (!movie && !sport) {
+  if (!movie ) {
     return (
       <div className="text-white text-center p-10 text-2xl">
          Not Found
