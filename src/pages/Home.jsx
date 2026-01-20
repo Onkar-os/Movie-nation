@@ -11,6 +11,14 @@ function Home() {
     navigate(`/others/${id}`);
   };
 
+  const open1 = (id) => {
+    navigate(`/Sportsother/${id}`);
+  };
+
+   const open2 = (id) => {
+    navigate(`/Cartoonother/${id}`);
+  };
+
   return (
     <div className="bg-black min-h-screen">
       <Navbar />
@@ -64,7 +72,7 @@ function Home() {
         {sports.map((sports) => (
           <div
             key={sports.id}
-            onClick={() => open(sports.id)}
+            onClick={() => open1(sports.id)}
             className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
             hover:scale-110 transition-all duration-300 
             backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
@@ -100,7 +108,7 @@ function Home() {
         {cartoons.map((cartoon) => (
           <div
             key={cartoon.id}
-            onClick={() => open(cartoon.id)}
+            onClick={() => open2(cartoon.id)}
             className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
             hover:scale-110 transition-all duration-300 
             backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]

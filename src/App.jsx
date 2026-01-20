@@ -13,6 +13,8 @@ import Sports from './pages/Sports.jsx'
 import News from './pages/News.jsx'
 import Tvserials from './pages/Tvserials.jsx'
 import Cartoons from './pages/Cartoons.jsx'
+import Sportsother from './pages/Sportsother.jsx'
+import Cartoonother from './pages/Cartoonother.jsx'
 function App() {
 
 
@@ -31,6 +33,8 @@ function App() {
         <Route path='/news' element={<News></News>}></Route>
         <Route path='/tvserials' element={<Tvserials></Tvserials>}></Route>
         <Route path='/cartoons' element={<Cartoons></Cartoons>}></Route>
+        <Route path='/Sportsother/:id' element={<Sportsother></Sportsother>}></Route>
+        <Route path='/Cartoonother/:id' element={<Cartoonother></Cartoonother>}></Route>
       </Routes>
       
 
