@@ -18,6 +18,14 @@ function Home() {
    const open2 = (id) => {
     navigate(`/Cartoonother/${id}`);
   };
+  
+  const open3 = (id) => {
+    navigate(`/Newsother/${id}`);
+  }
+
+  const open4 = (id) => {
+    navigate(`/Tvserialother/${id}`);
+  }
 
   return (
     <div className="bg-black min-h-screen">
@@ -141,7 +149,7 @@ function Home() {
         {news.map((newsItem) => (
           <div
             key={newsItem.id}
-            onClick={() => open(newsItem.id)}
+            onClick={() => open3(newsItem.id)}
             className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
             hover:scale-110 transition-all duration-300 
             backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
@@ -177,7 +185,7 @@ function Home() {
         {tv.map((tvitem) => (
           <div
             key={tvitem.id}
-            onClick={() => open(tvitem.id)}
+            onClick={() => open4(tvitem.id)}
             className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
             hover:scale-110 transition-all duration-300 
             backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]

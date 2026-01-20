@@ -15,6 +15,8 @@ import Tvserials from './pages/Tvserials.jsx'
 import Cartoons from './pages/Cartoons.jsx'
 import Sportsother from './pages/Sportsother.jsx'
 import Cartoonother from './pages/Cartoonother.jsx'
+import Newsother from './pages/Newsother.jsx'
+import Tvserialother from './pages/Tvserialother.jsx'
 function App() {
 
 
@@ -35,6 +37,8 @@ function App() {
         <Route path='/cartoons' element={<Cartoons></Cartoons>}></Route>
         <Route path='/Sportsother/:id' element={<Sportsother></Sportsother>}></Route>
         <Route path='/Cartoonother/:id' element={<Cartoonother></Cartoonother>}></Route>
+        <Route path='/Newsother/:id' element={<Newsother></Newsother>}></Route>
+        <Route path='/Tvserialother/:id' element={<Tvserialother></Tvserialother>}></Route>
       </Routes>
       
 
