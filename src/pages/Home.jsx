@@ -1,215 +1,142 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { allMovies, cartoons, sports,news, tv } from "../data/moviesData";
-import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import { allMovies, cartoons, sports, news, tv } from "../data/moviesData";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
 
-  const open = (id) => {
-    navigate(`/others/${id}`);
-  };
+  // MODAL STATE
+  const [selectedNews, setSelectedNews] = useState(null);
 
-  const open1 = (id) => {
-    navigate(`/Sportsother/${id}`);
-  };
+  // OPEN OTHER PAGES
+  const open = (id) => navigate(`/others/${id}`);
+  const open1 = (id) => navigate(`/Sportsother/${id}`);
+  const open2 = (id) => navigate(`/Cartoonother/${id}`);
+  const open4 = (id) => navigate(`/Tvserialother/${id}`);
 
-   const open2 = (id) => {
-    navigate(`/Cartoonother/${id}`);
-  };
-  
-  const open3 = (id) => {
-    navigate(`/Newsother/${id}`);
-  }
-
-  const open4 = (id) => {
-    navigate(`/Tvserialother/${id}`);
-  }
+  // ESC KEY CLOSE MODAL
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setSelectedNews(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
 
   return (
     <div className="bg-black min-h-screen">
       <Navbar />
 
-      {/* Section Title */}
-      <h2 className="text-3xl font-bold mb-4 text-white px-6 tracking-wide 
-      mt-4 drop-shadow-[0_2px_6px_rgba(255,255,255,0.3)]">
-        All Movies
-      </h2>
-
-      {/* Horizontal Scroll (Upgraded UI) */}
-      <div className="flex overflow-x-auto space-x-6 pb-6 px-6 hide-scrollbar scroll-smooth 
-      snap-x snap-mandatory">
-
+      {/* ================= ALL MOVIES ================= */}
+      <Section title="All Movies">
         {allMovies.map((movie) => (
-          <div
-            key={movie.id}
-            onClick={() => open(movie.id)}
-            className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
-            hover:scale-110 transition-all duration-300 
-            backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
-            overflow-hidden snap-start border border-gray-800
-            hover:border-purple-400/40 hover:shadow-purple-500/30"
-          >
-            <img
-              src={movie.img}
-              alt={movie.name}
-              className="w-full h-64 object-cover transition-all duration-300 
-              hover:brightness-110 hover:contrast-125"
-            />
-
-            <div className="p-4 text-white">
-              <h3 className="font-semibold text-lg">{movie.name}</h3>
-              <p className="text-sm opacity-70">⏳ {movie.time}</p>
-              <p className="text-sm opacity-70">⭐ IMDB: {movie.rating}</p>
-            </div>
-          </div>
+          <Card key={movie.id} onClick={() => open(movie.id)} img={movie.img}>
+            <h3>{movie.name}</h3>
+            <p>⏳ {movie.time}</p>
+            <p>⭐ IMDB: {movie.rating}</p>
+          </Card>
         ))}
-      </div>
+      </Section>
 
-
-      {/* Sports Section */}
-      <h2 className="text-3xl font-bold mb-4 text-white px-6 tracking-wide
-      drop-shadow-[0_2px_6px_rgba(255,255,255,0.3)]">
-        Sports
-      </h2>
-
-      <div className="flex overflow-x-auto space-x-6 pb-6 px-6 hide-scrollbar scroll-smooth 
-      snap-x snap-mandatory">
-
-        {sports.map((sports) => (
-          <div
-            key={sports.id}
-            onClick={() => open1(sports.id)}
-            className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
-            hover:scale-110 transition-all duration-300 
-            backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
-            overflow-hidden snap-start border border-gray-800
-            hover:border-blue-400/40 hover:shadow-blue-500/30"
-          >
-            <img
-              src={sports.img}
-              alt={sports.name}
-              className="w-full h-64 object-cover transition-all duration-300
-              hover:brightness-110 hover:contrast-125"
-            />
-
-            <div className="p-4 text-white">
-              <h3 className="font-semibold text-lg">{sports.name}</h3>
-              <p className="text-sm opacity-70">⏳ {sports.description}</p>
-              <p className="text-sm opacity-70">Category: {sports.category}</p>
-            </div>
-          </div>
+      {/* ================= SPORTS ================= */}
+      <Section title="Sports">
+        {sports.map((sport) => (
+          <Card key={sport.id} onClick={() => open1(sport.id)} img={sport.img}>
+            <h3>{sport.name}</h3>
+            <p>Category: {sport.category}</p>
+          </Card>
         ))}
-      </div>
+      </Section>
 
-
-      {/* Cartoons Section */}
-      <h2 className="text-3xl font-bold mb-4 text-white px-6 tracking-wide
-      drop-shadow-[0_2px_6px_rgba(255,255,255,0.3)]">
-        Cartoons
-      </h2>
-
-      <div className="flex overflow-x-auto space-x-6 pb-6 px-6 hide-scrollbar scroll-smooth 
-      snap-x snap-mandatory">
-
+      {/* ================= CARTOONS ================= */}
+      <Section title="Cartoons">
         {cartoons.map((cartoon) => (
-          <div
-            key={cartoon.id}
-            onClick={() => open2(cartoon.id)}
-            className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
-            hover:scale-110 transition-all duration-300 
-            backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
-            overflow-hidden snap-start border border-gray-800
-            hover:border-pink-400/40 hover:shadow-pink-500/30"
-          >
-            <img
-              src={cartoon.img}
-              alt={cartoon.name}
-              className="w-full h-64 object-cover transition-all duration-300
-              hover:brightness-110 hover:contrast-125"
-            />
-
-            <div className="p-4 text-white">
-              <h3 className="font-semibold text-lg">{cartoon.name}</h3>
-              <p className="text-sm opacity-70">⏳ {cartoon.description}</p>
-            </div>
-          </div>
+          <Card key={cartoon.id} onClick={() => open2(cartoon.id)} img={cartoon.img}>
+            <h3>{cartoon.name}</h3>
+          </Card>
         ))}
-      </div>
-      {/* news */}
-        <h2 className="text-3xl font-bold mb-4 text-white px-6 tracking-wide
-      drop-shadow-[0_2px_6px_rgba(255,255,255,0.3)]">
-        News
-      </h2>
+      </Section>
 
-      <div className="flex overflow-x-auto space-x-6 pb-6 px-6 hide-scrollbar scroll-smooth 
-      snap-x snap-mandatory">
-
-        {news.map((newsItem) => (
-          <div
-            key={newsItem.id}
-            onClick={() => open3(newsItem.id)}
-            className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
-            hover:scale-110 transition-all duration-300 
-            backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
-            overflow-hidden snap-start border border-gray-800
-            hover:border-pink-400/40 hover:shadow-pink-500/30"
-          >
-            <img
-              src={newsItem.img}
-              alt={newsItem.name}
-              className="w-full h-64 object-cover transition-all duration-300
-              hover:brightness-110 hover:contrast-125"
-            />
-
-            <div className="p-4 text-white">
-              <h3 className="font-semibold text-lg">{newsItem.name}</h3>
-              <p className="text-sm opacity-70">⏳ {newsItem.description}</p>
-            </div>
-          </div>
+      {/* ================= NEWS (MODAL ON CLICK) ================= */}
+      <Section title="News">
+        {news.map((item) => (
+          <Card key={item.id} img={item.img} onClick={() => setSelectedNews(item)}>
+            <h3>{item.name}</h3>
+          </Card>
         ))}
-      </div>
+      </Section>
 
-
-      {/* tv serial  */}
-      
-      <h2 className="text-3xl font-bold mb-4 text-white px-6 tracking-wide
-      drop-shadow-[0_2px_6px_rgba(255,255,255,0.3)]">
-        Tv Serial
-      </h2>
-
-      <div className="flex overflow-x-auto space-x-6 pb-6 px-6 hide-scrollbar scroll-smooth 
-      snap-x snap-mandatory">
-
+      {/* ================= TV SERIAL ================= */}
+      <Section title="TV Serial">
         {tv.map((tvitem) => (
-          <div
-            key={tvitem.id}
-            onClick={() => open4(tvitem.id)}
-            className="bg-gray-900/70 min-w-[220px] rounded-xl cursor-pointer 
-            hover:scale-110 transition-all duration-300 
-            backdrop-blur-xl shadow-xl hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
-            overflow-hidden snap-start border border-gray-800
-            hover:border-pink-400/40 hover:shadow-pink-500/30"
-          >
-            <img
-              src={tvitem.img}
-              alt={tvitem.name}
-              className="w-full h-64 object-cover transition-all duration-300
-              hover:brightness-110 hover:contrast-125"
-            />
-
-            <div className="p-4 text-white">
-              <h3 className="font-semibold text-lg">{tvitem.name}</h3>
-              <p className="text-sm opacity-70">⏳ {tvitem.description}</p>
-            </div>
-          </div>
+          <Card key={tvitem.id} onClick={() => open4(tvitem.id)} img={tvitem.img}>
+            <h3>{tvitem.name}</h3>
+          </Card>
         ))}
-      </div>
+      </Section>
 
       <Footer />
+
+      {/* ================= NEWS MODAL ================= */}
+      {selectedNews && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center"
+          onClick={() => setSelectedNews(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative bg-gray-900 text-white w-[90%] md:w-[600px] rounded-xl overflow-hidden shadow-2xl animate-scaleIn"
+          >
+            <button
+              onClick={() => setSelectedNews(null)}
+              className="absolute top-3 right-4 text-2xl font-bold hover:text-red-400"
+            >
+              ✕
+            </button>
+
+            <img
+              src={selectedNews.img}
+              alt={selectedNews.name}
+              className="w-full h-60 object-cover"
+            />
+
+            <div className="p-6">
+              <h1 className="text-2xl font-extrabold mb-3">
+                {selectedNews.name}
+              </h1>
+              <p className="text-gray-300 leading-relaxed">
+                {selectedNews.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default Home;
+
+/* ================= COMPONENTS ================= */
+function Section({ title, children }) {
+  return (
+    <>
+      <h2 className="text-3xl font-bold text-white px-6 my-4">{title}</h2>
+      <div className="flex overflow-x-auto space-x-6 px-6 pb-6">{children}</div>
+    </>
+  );
+}
+
+function Card({ img, onClick, children }) {
+  return (
+    <div
+      onClick={onClick}
+      className="bg-gray-900 min-w-[220px] rounded-xl cursor-pointer hover:scale-105 transition-all overflow-hidden"
+    >
+      <img src={img} className="h-64 w-full object-cover rounded-t-xl" />
+      <div className="p-4 text-white">{children}</div>
+    </div>
+  );
+}
